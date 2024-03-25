@@ -13,11 +13,10 @@ export default function KanbanBoard({ permissions, loginFunction }) {
   const [outOfStock, setOutOfStock] = useState<Array<paint>>([]);
 
   //API call to retrieve list of paints from the backend and add to available paints
-  //TODO: change API call address to not localhost
   useEffect(() => {
     axios
       .get(
-        "https://django-paint-6d3cee377c88.herokuapp.com/api/retrieve-paints",
+        "https://django-paint-6d3cee377c88.herokuapp.com/api/retrieve-paints"
       )
       .then((response) => {
         let paintArrayavailable = [];
@@ -131,14 +130,14 @@ export default function KanbanBoard({ permissions, loginFunction }) {
           id: paint.id,
           newStock: paint.currentStock,
           newColumn: destinationDroppableId,
-        },
+        }
       )
       .then((response) => {})
       .catch((error) => {
         console.log(error);
       });
   }
-  //easy way of removing from array
+  //easy way of removing from old array
   function deleteItem(sourceDroppableId: string, paintId: string) {
     switch (sourceDroppableId) {
       case "1":
@@ -169,28 +168,28 @@ export default function KanbanBoard({ permissions, loginFunction }) {
   const updatePaints = (
     paint: paint,
     newStock: number,
-    droppableId: string,
+    droppableId: string
   ) => {
     switch (droppableId) {
       case "1":
         setAvailable(
           available.map((el) =>
-            el.id == paint.id ? { ...el, currentStock: newStock } : el,
-          ),
+            el.id == paint.id ? { ...el, currentStock: newStock } : el
+          )
         );
         break;
       case "2":
         setRunningLow(
           runningLow.map((el) =>
-            el.id == paint.id ? { ...el, currentStock: newStock } : el,
-          ),
+            el.id == paint.id ? { ...el, currentStock: newStock } : el
+          )
         );
         break;
       case "3":
         setOutOfStock(
           outOfStock.map((el) =>
-            el.id == paint.id ? { ...el, currentStock: newStock } : el,
-          ),
+            el.id == paint.id ? { ...el, currentStock: newStock } : el
+          )
         );
         break;
     }
@@ -203,7 +202,7 @@ export default function KanbanBoard({ permissions, loginFunction }) {
           id: paint.id,
           newStock: newStock,
           newColumn: droppableId,
-        },
+        }
       )
       .then((response) => {})
       .catch((error) => {

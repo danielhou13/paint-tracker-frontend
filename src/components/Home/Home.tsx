@@ -4,6 +4,7 @@ import KanbanBoard from "../KanbanBoard/KanbanBoard";
 export default function Home({ permissions, loginFunction, user }) {
   const [notAdam, setnotAdam] = useState(false);
 
+  //navbar with sys admin menu that only works if user === adam. Footer with more details, middle kanbanboard
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
