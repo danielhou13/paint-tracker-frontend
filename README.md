@@ -20,7 +20,7 @@ Based on the user, we find we see a few things:
 ![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/a9159bae-94d6-481e-9c1b-d58f435636f7)
 1.1. If Adam clicks the System Admin menu button, it will take him to the Django admin page where he can log in and perform system admin duties. More information in the backend repo [here](https://github.com/danielhou13/paint_backend).
 2. In the Kanban columns, paints can be dragged between columns, as well as within their own column just to change the display order.
-3. The stock can be edited, and because we connected the backend to an Amazon RDS MySQL database, it will persist if you close and reopen the page. Simply click off the paint card and it will update. 
+3. The stock can be edited, and because the backend is connected to an Amazon RDS MySQL database, it will persist if you close and reopen the page. Simply click off the paint card and it will update. 
 *John cannot update the inventory* as he does not have permission to do so as shown by the lack of "edit stock" buttons.</br>
 
 |![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/215918fa-90b3-40ef-9f7d-628ced012efa)<br>Adam/Jane/painter card view | ![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/44a8ee60-4707-47a2-9be0-3a68b2eef5a4)<br>John card view|
