@@ -12,16 +12,18 @@ If you try and login, but enter wrong credentials, the page will display an erro
 ![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/9510e64d-271d-4d06-b9df-2f0dd24d22ff)
 
 ### Main Kanban Board
-Logging in as a regular painter, this is the menu we would find:
+Remember that there are different use cases for each user, but the general main page looks like this:
 ![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/38bff11f-025c-4a55-98e2-278afed5b955)
 
-Here we see a few things: 
-1. In the top navbar, we see the current user, a system admin menu, and a logout button. If you are not Adam and click the system admin button, we would get a message saying "only Adam" can access it.
+Based on the user, we find we see a few things: 
+1. For all users, we have a top navbar. In the top navbar, we see the current user, a system admin menu, and a logout button. If you are not **Adam** and click the system admin button, we would get a message saying "only Adam" can access it.
 ![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/a9159bae-94d6-481e-9c1b-d58f435636f7)
+1.1. If Adam clicks the System Admin menu button, it will take him to the Django admin page where he can log in and perform system admin duties. More information in the backend repo [here](https://github.com/danielhou13/paint_backend).
 2. In the Kanban columns, paints can be dragged between columns, as well as within their own column just to change the display order.
-3. The stock can be edited, and because we connected the backend to an Amazon RDS mysql database, it will persist if you close and reopen the page. Simply click off the paint card and it will update. John cannot update the inventory as he does not have the permissions to do so shown by the lack of "edit stock" buttons. </br>
+3. The stock can be edited, and because we connected the backend to an Amazon RDS mysql database, it will persist if you close and reopen the page. Simply click off the paint card and it will update. 
+*John cannot update the inventory* as he does not have the permissions to do so shown by the lack of "edit stock" buttons.</br>
 
 |![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/215918fa-90b3-40ef-9f7d-628ced012efa)<br>Adam/Jane/painter card view | ![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/44a8ee60-4707-47a2-9be0-3a68b2eef5a4)<br>John card view|
 |:-:|:-:|
 
-4. If Adam clicks the System Admin menu button, it will take him to the Django admin page where he can log in and perform system admin duties. More information in the backend repo [here](https://github.com/danielhou13/paint_backend).
+
