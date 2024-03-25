@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# Paint Tracker Website Django Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a kanban style board for displaying the stock and status of current paints in the inventory.
+This application was built using React.js along with some other packages such as bootstrap for styling. The code was deployed in Codesandbox.io [here](https://codesandbox.io/p/github/danielhou13/paint-tracker-frontend/main?layout=%257B%2522sidebarPanel%2522%253A%2522GIT%2522%252C%2522rootPanelGroup%2522%253A%257B%2522direction%2522%253A%2522horizontal%2522%252C%2522contentType%2522%253A%2522UNKNOWN%2522%252C%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522id%2522%253A%2522ROOT_LAYOUT%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522UNKNOWN%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522clu65r9z50006356gmjccxcx8%2522%252C%2522sizes%2522%253A%255B70%252C30%255D%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522EDITOR%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522EDITOR%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522EDITOR%2522%252C%2522id%2522%253A%2522clu65r9z50002356gvmi6yi5d%2522%257D%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522SHELLS%2522%252C%2522direction%2522%253A%2522horizontal%2522%252C%2522id%2522%253A%2522SHELLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522SHELLS%2522%252C%2522id%2522%253A%2522clu65r9z50004356gm2ogc621%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%255D%257D%252C%257B%2522type%2522%253A%2522PANEL_GROUP%2522%252C%2522contentType%2522%253A%2522DEVTOOLS%2522%252C%2522direction%2522%253A%2522vertical%2522%252C%2522id%2522%253A%2522DEVTOOLS%2522%252C%2522panels%2522%253A%255B%257B%2522type%2522%253A%2522PANEL%2522%252C%2522contentType%2522%253A%2522DEVTOOLS%2522%252C%2522id%2522%253A%2522clu65r9z50005356gyl0mqzmb%2522%257D%255D%252C%2522sizes%2522%253A%255B100%255D%257D%255D%252C%2522sizes%2522%253A%255B50%252C50%255D%257D%252C%2522tabbedPanels%2522%253A%257B%2522clu65r9z50002356gvmi6yi5d%2522%253A%257B%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clu65r9z50001356gjmyq665l%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522FILE%2522%252C%2522filepath%2522%253A%2522%252FREADME.md%2522%252C%2522state%2522%253A%2522IDLE%2522%257D%255D%252C%2522id%2522%253A%2522clu65r9z50002356gvmi6yi5d%2522%252C%2522activeTabId%2522%253A%2522clu65r9z50001356gjmyq665l%2522%257D%252C%2522clu65r9z50005356gyl0mqzmb%2522%253A%257B%2522id%2522%253A%2522clu65r9z50005356gyl0mqzmb%2522%252C%2522activeTabId%2522%253A%2522clu65ruc500a7356gt4xjklwt%2522%252C%2522tabs%2522%253A%255B%257B%2522type%2522%253A%2522TASK_PORT%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A5173%252C%2522id%2522%253A%2522clu65ruc500a7356gt4xjklwt%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522path%2522%253A%2522%252Flogin%2522%257D%255D%257D%252C%2522clu65r9z50004356gm2ogc621%2522%253A%257B%2522id%2522%253A%2522clu65r9z50004356gm2ogc621%2522%252C%2522activeTabId%2522%253A%2522clu65rqu6008l356g5ct1pmt0%2522%252C%2522tabs%2522%253A%255B%257B%2522id%2522%253A%2522clu65r9z50003356gazczh6e3%2522%252C%2522mode%2522%253A%2522permanent%2522%252C%2522type%2522%253A%2522TERMINAL%2522%252C%2522shellId%2522%253A%2522clu65rbac000xdkgm3u3wdul2%2522%257D%252C%257B%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522id%2522%253A%2522clu65rqu6008l356g5ct1pmt0%2522%252C%2522mode%2522%253A%2522permanent%2522%257D%255D%257D%257D%252C%2522showDevtools%2522%253Atrue%252C%2522showShells%2522%253Atrue%252C%2522showSidebar%2522%253Atrue%252C%2522sidebarPanelSize%2522%253A15%257D).
+The frontend interacts with a Django backend found at this [repo](https://github.com/danielhou13/paint_backend).
 
-Currently, two official plugins are available:
+### Login Page
+![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/ac4bed8f-66a4-4670-9dd4-ce58d8d6f857)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+As you can see, its a very simple login page. Currently the only users are displyed as a tooltip under each login form field. Obviously in production you wouldn't have information such as this, but for demonstration purposes this is sufficient. The passwords for each user are also identical (obviously bad in produciton but sufficient in dmeonstration).
+If you try and login, but enter wrong credentials, the page will display an error message as follows: 
+![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/9510e64d-271d-4d06-b9df-2f0dd24d22ff)
 
-## Expanding the ESLint configuration
+### Main Kanban Board
+Logging in as a regular painter, this is the menu we would find:
+![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/38bff11f-025c-4a55-98e2-278afed5b955)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Here we see a few things: 
+1. In the top navbar, we see the current user, a system admin menu, and a logout button. If you are not Adam and click the system admin button, we would get a message saying "only Adam" can access it.
+![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/a9159bae-94d6-481e-9c1b-d58f435636f7)
+2. In the Kanban columns, paints can be dragged between columns, as well as within their own column just to change the display order.
+3. The stock can be edited, and because we connected the backend to an Amazon RDS mysql database, it will persist if you close and reopen the page. Simply click off the paint card and it will update. John cannot update the inventory as he does not have the permissions to do so shown by the lack of "edit stock" buttons. </br>
 
-- Configure the top-level `parserOptions` property like this:
+|![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/215918fa-90b3-40ef-9f7d-628ced012efa)<br>Adam/Jane/painter card view | ![image](https://github.com/danielhou13/Paint_tracker_website/assets/54420410/44a8ee60-4707-47a2-9be0-3a68b2eef5a4)<br>John card view|
+|:-:|:-:|
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. If Adam clicks the System Admin menu button, it will take him to the Django admin page where he can log in and perform system admin duties. More information in the backend repo [here](https://github.com/danielhou13/paint_backend).
