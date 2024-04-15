@@ -16,7 +16,7 @@ export default function Login({ setLoggedIn, setPermissions, user }) {
       .then((response) => {
         setErrorLogin(false);
         setLoggedIn(response.data.Logged_in);
-        if (!!response.data.Permissions) {
+        if (response.data.Permissions) {
           // get permissions' names
           setPermissions(
             response.data.Permissions.permissions_json.map(
@@ -28,12 +28,19 @@ export default function Login({ setLoggedIn, setPermissions, user }) {
         user(response.data.name);
       })
       .catch((error) => {
+        console.log(error);
         setErrorLogin(true);
       });
   };
   return (
     <div className="container-xl">
       <h1>Login</h1>
+      <br />
+      <h2>
+        The AWS database connection is currently paused. If you wish to test the
+        website, please reach out at danielhou13@gmail.com to restart the AWS
+        database.
+      </h2>
       <br />
       <form>
         <div className="form-group mt-3">
